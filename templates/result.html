@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+    <h1>Result</h1>
+    {% if content.status_code == 200 %}
+        <p>Upload successful! {{ content.status_code }}</p>
+        <p>File: {{ content.file_name }}</p>
+        <p>Path to file: {{ content.file_url }}</p>
+        <p>Upload time: {{ content.upload_time }} seconds</p>
+    {% else %}
+        <p>Upload file error</p>
+        <p>{{ content.status_code }}</p>
+        <p>{{ content.error }}</p>
+    {% endif %}
+{% endblock %}
