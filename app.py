@@ -36,6 +36,7 @@ def upload_file():
         content['file_name'] = request.files['file'].filename
         content['file_url'] = response_data['data']['links']['public']
         content['upload_time'] = f'{upload_time:.2f}'
+        content['last_modified'] = response_data['data']['last_modified']
     else:
         content['error'] = response.content
 

@@ -7,6 +7,7 @@
         <p>File: {{ content.file_name }}</p>
         <p>Path to file: {{ content.file_url }}</p>
         <p>Upload time: {{ content.upload_time }} seconds</p>
+        <p>last modified: {{ content.last_modified }}</p>
     {% else %}
         <p>Upload file error</p>
         <p>{{ content.status_code }}</p>
